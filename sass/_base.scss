@@ -26,6 +26,7 @@ Primary-blue-Light:#00DCDC
 
 */
 
+//css custom property
 :root {
     --color-primary-pink: #eb2f64;
     --color-primary: #008080;
@@ -43,6 +44,11 @@ Primary-blue-Light:#00DCDC
     --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //  1200px/16=75  1em = 16px
+$bp-large:68.75em; //1100/16
+$bp-medium: 56.25em; //900px/16 
+$bp-small: 37.5em; //600px/16 
+$bp-smallest: 31.25em; //500px / 16
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +63,9 @@ Primary-blue-Light:#00DCDC
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem == 10px (target)/(browser default) 10px / 16px = 62.5%
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 8px/ 16  1em =16
+    }
 }
 
 body {
